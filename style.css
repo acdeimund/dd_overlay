@@ -1,8 +1,7 @@
 .dd_overlay{
-  width: 200px;
-  height: 200px;
-  background-color: azure;
+  width: 460px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 95px;
+  right: 30px;
+  opacity: 1;
 }

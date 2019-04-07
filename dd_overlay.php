@@ -60,10 +60,12 @@ function dd_overlay_scripts() {
 add_action( 'wp_enqueue_scripts', 'dd_overlay_scripts' );
 
 function dd_add_overlay(){
+  global $post;
+
   $args = array( "posts_per_page" => 1,"post_type" => "overlay" );
   $overlay = get_posts( $args );
   foreach ( $overlay as $post ) : setup_postdata( $post ); ?>
-    <img class = "overlay <?php the_title(); ?>" src = "<?php the_post_thumbnail_url(); ?>);">
+    <img class = "dd_overlay <?php the_title(); ?>" src = "<?php the_post_thumbnail_url(); ?>);">
   <?php endforeach; 
   wp_reset_postdata();
 }
